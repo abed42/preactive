@@ -6,10 +6,12 @@ const NewTaskForm = ({addTaskProp}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         addTaskProp(title)
+        
         setTitle('')
     }
-
+// console.log(title)
     return ( 
         <form onSubmit={handleSubmit}>
             <label>Task : </label>

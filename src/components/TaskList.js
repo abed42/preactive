@@ -4,6 +4,8 @@ import NewTaskForm from "./NewTaskForm";
 
 const TaskList = () => {
 
+    fetch()
+
 const [tasks, setTasks] =  useState([
     {title: 'homework', id: 1}, 
     {title: 'workout', id: 2},
@@ -12,14 +14,15 @@ const [tasks, setTasks] =  useState([
     {title: 'issue an invoice', id: 5}
 ]);
 
-const addTask = (title) => setTasks([...tasks, {title, id: uuidv4()}])
+const addTask = (title) => setTasks([...tasks, {title, id: uuidv4()}]);
 
-console.log(tasks)
+const removeTask = (id) => setTasks(tasks.filter(task => task.id !== id ));
+
     return (  
         <div>
             <ul>
                 {tasks.map( task => {
-                return (  <li key={task.id} >  {task.title} </li>  )
+                return (  <li key={task.id} >  {task.title} <span onClick={()=> removeTask(task.id)} style={{color :'red', marginLeft: '20px'}}>x</span> </li>  )
                 })}
             </ul> 
 
