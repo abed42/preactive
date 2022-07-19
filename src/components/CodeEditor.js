@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NewTaskForm = ({addTaskProp}) => {
+const CodeEditor = () => {
 
     const [title, setTitle] = useState('');
 

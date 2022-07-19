@@ -1,7 +1,16 @@
 .App {
   text-align: center;
+  background: rgb(58,65,180);
+  background: linear-gradient(90deg, rgba(58,65,180,1) 0%, rgba(138,52,137,0.9962359943977591) 51%, rgba(92,69,252,1) 100%);
 }
 
+.link {
+  color: aliceblue;
+  font-size:x-large;
+}
+li {
+  list-style: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
